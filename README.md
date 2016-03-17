@@ -25,8 +25,8 @@ You must have the two files "espWiFi2eeprom.h" and "espWiFi2eeprom.ino" in the s
 
 -* Has been tested with NodeMCU v1.0 and Arduino IDE 1.6.5-r5 in Windows 7 *-
 
-Check example-espWiFi2eeprom.ino for an example of usage along with another server.
+Check "example-espWiFi2eeprom.ino" for an example of usage along with another server.
 
-You can edit espWiFi2eeprom.h in order to change parameters.
+You can edit "espWiFi2eeprom.h" in order to change parameters.
 
 --------------------------------------------------------------------------------
