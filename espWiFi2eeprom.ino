@@ -45,7 +45,7 @@ String APwebPage1 = "<!DOCTYPE HTML>\n"
                     "<body>\n"
                     "<center>\n"
                     "<h1>esp8266 WiFi setup control</h1>\n<br>"
-                    "<table style=\"width:100%\"><tr>"
+                    "<table style=\"width:100%;border: 1px solid #fff;\"><tr>"
                     "<th style=\"text-align:center;width:50%;\"><form action='/APsubmit' method='POST'><input type=\"text\" name=\"newssid\" id=\"formnewssid\" value=\"\"><br><input type=\"text\" name=\"newpass\" value=\"\" size=\"32\" maxlength=\"64\"><br><input type=\"submit\" value=\"Submit\"></form></th>"
                     "<th style=\"text-align:left;width:50%;\">";
 
