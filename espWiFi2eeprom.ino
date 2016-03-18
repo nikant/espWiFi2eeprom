@@ -50,9 +50,9 @@ String APwebPage1 = "<!DOCTYPE HTML>\n"
                     "<th style=\"text-align:left;width:50%;\">";
 
 String APwebPage2 =  "</th></tr></table>\n"
-                     "<br><br><a href=\"/\" target=\"_top\"><b>- home / rescan networks -</b></a>\n"
-                     "<br><br><br><a href=\"" + String(restartcommand) + "\" target=\"_top\"><b>-* restart esp8266 *-</b></a>\n"
-                     "<br><br><br><a href=\"" + String(cleareepromcommand) + "\" target=\"_top\"><b>-* clear EEPROM *-</b></a>\n"
+                     "<br><br><form action=\"/\" target=\"_top\"><input type=\"submit\" value=\"home / rescan networks\"></form>\n"
+                     "<br><br><form action=\"" + String(restartcommand) + "\" target=\"_top\"><input type=\"submit\" value=\"restart esp8266\"></form>\n"
+                     "<br><br><form action=\"" + String(cleareepromcommand) + "\" target=\"_top\"><input type=\"submit\" value=\"-* clear EEPROM *-\"></form>\n"
                      "<br><br><b>- version: " ESPWIFI2EEPROM_VERSION " -</b></a>\n"
                      "</center>\n"
                      "</body></html>";
