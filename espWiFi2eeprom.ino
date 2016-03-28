@@ -54,7 +54,7 @@ String APwebPage2 =  "</th></tr></table>\n"
                      "<br><br><form action=\"/\" target=\"_top\"><input type=\"submit\" value=\"home / rescan networks\"></form>\n"
                      "<br><br><form action=\"" + String(restartcommand) + "\" target=\"_top\"><input type=\"submit\" value=\"restart esp8266\"></form>\n"
                      "<br><br><form action=\"" + String(cleareepromcommand) + "\" target=\"_top\"><input type=\"submit\" value=\"! clear EEPROM !\"></form>\n"
-                     "<br><br><b>- version: " ESPWIFI2EEPROM_VERSION " -</b></a>\n"
+                     "<br><br><b>- version: " ESPWIFI2EEPROM_VERSION " -</b>\n"
                      "</body></html>";
 
 
