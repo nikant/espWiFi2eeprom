@@ -244,6 +244,7 @@ void getAPlist() {
 
 // setup a soft AP for the user to connect to esp8266 and give a new ssid and pass
 void setupWiFiAP() {
+  WiFi.mode(WIFI_AP);
   // Do a little work to get a unique-ish name for the soft AP. Append the
   // last two bytes of the MAC (HEX'd):
   uint8_t mac[WL_MAC_ADDR_LENGTH];
