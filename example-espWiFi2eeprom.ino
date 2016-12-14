@@ -39,7 +39,7 @@ void handle_root() {
 
 void setup() {
   Serial.begin (57600);
-
+  WiFi.setOutputPower(20.5);
   WiFi.mode(WIFI_STA);
   // uncomment the following if you set a static IP in the begining
   //WiFi.config(nkip, nkgateway, nksubnet);
