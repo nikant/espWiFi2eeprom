@@ -8,9 +8,10 @@
 const char AP_password[] = "esp8266control";
 //--
 
-#define ESPWIFI2EEPROM_VERSION "0.4"
+#define ESPWIFI2EEPROM_VERSION "0.5"
 void espNKWiFiconnect();
 void handle_APrestart();
 void handle_clearAPeeprom();
 extern const char* restartcommand;
 extern const char* cleareepromcommand;
+
