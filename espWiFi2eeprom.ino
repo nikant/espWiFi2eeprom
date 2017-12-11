@@ -39,7 +39,7 @@ const char* cleareepromcommand = "/" AP_CLEAREEPROM;
 
 ESP8266WebServer APserver(AP_WIFICFGPORT);
 
-// web page parts 
+// web page parts
 const char APwebPage1[] PROGMEM = "<!DOCTYPE HTML>\n"
                                   "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title>esp8266 WiFi setup control</title>\n"
                                   "<style type=\"text/css\">body {text-align:center;font-family: sans-serif;background-color: #000;color: #fff;font-size:1.2em;} a:link, a:visited, a:hover, a:active {color:#fff;}</style>\n"
@@ -61,7 +61,7 @@ String APwebPage2 =  "</th></tr></table>\n"
 String APwebstring = "";   // String to display
 
 
-// clear first bytes of eeprom 
+// clear first bytes of eeprom
 void handle_clearAPeeprom() {
   Serial.println(F("! Clearing eeprom !"));
   for (int i = 0; i < 96; ++i) {
@@ -179,7 +179,8 @@ boolean testWiFi() {
   int c = 0;
   Serial.print(F("Waiting for Wifi to connect"));
   // c at 60 with delay 500 is for 30 seconds ;)
-  while ( c < 60 ) {
+  // c at 120 with delay 500 is for 60 seconds ;)
+  while ( c < 120 ) {
     Serial.print(".");
     if (WiFi.status() == WL_CONNECTED) {
       Serial.println("");
@@ -239,6 +240,14 @@ void getAPlist() {
     APwebstring += F("</li>");
   }
   APwebstring += F("</ul>");
+  delay(100);
+  Serial.println("");
+  for (int i = 0; i < n; ++i)
+  {
+    Serial.print((i + 1));
+    Serial.println(". " + WiFi.SSID(indices[i]) + " " + WiFi.RSSI(indices[i]) + " " + printEncryptionType(WiFi.encryptionType(indices[i])));
+  }
+  Serial.println("");
   delay(100);
 }
 
@@ -337,3 +346,5 @@ void espNKWiFiconnect() {
     setupWiFiAP();
   }
 }
+
+
